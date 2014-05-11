@@ -6,6 +6,6 @@ DT[[1]] <- as.Date(DT[[1]], "%d/%m/%Y")
 good <- (DT[[1]]==as.Date("1/2/2007", "%d/%m/%Y") | DT[[1]]==as.Date("2/2/2007", "%d/%m/%Y"))
 d <- DT[good,]
 d$Time <- strptime(paste(d$Date,d$Time,sep=" "), "%Y-%m-%d %H:%M:%S")
-plot(d[[2]],d[[3]],type="n",ylab="Global Active Power (kilowatts)")
+plot(d[[2]],d[[3]],type="n",xlab="",ylab="Global Active Power (kilowatts)")
 lines(d[[2]],d[[3]])
 dev.off()
